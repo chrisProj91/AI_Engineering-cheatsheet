@@ -291,3 +291,286 @@ Prevents overfitting by penalizing large weights.
 ---
 
 
+## 13. Feature Scaling
+
+Feature scaling ensures all features have similar ranges, improving model performance.
+
+### 13.1 Normalization (Min-Max Scaling)
+
+Scales values to [0, 1]:
+
+x' = (x - min) / (max - min)
+
+
+### 13.2 Standardization (Z-score)
+
+Centers data around mean 0 and std 1:
+
+x' = (x - μ) / σ
+
+
+### When to Use:
+- Required for: SVM, KNN, Neural Networks
+- Not critical for: Tree-based models
+
+---
+
+## 14. Handling Categorical Data
+
+### 14.1 One-Hot Encoding
+- Converts categories into binary vectors
+
+Example:
+Color: Red, Blue, Green
+→ [1,0,0], [0,1,0], [0,0,1]
+
+
+
+### 14.2 Label Encoding
+- Assigns integer values
+- Use only for ordinal data
+
+---
+
+## 15. Missing Data Handling
+
+### Techniques:
+- Remove rows/columns
+- Mean/median imputation
+- Model-based imputation
+
+---
+
+## 16. Data Leakage (VERY IMPORTANT)
+
+Occurs when information from outside the training dataset is used.
+
+### Examples:
+- Using test data during training
+- Scaling before splitting data
+
+### Prevention:
+- Always split first
+- Use pipelines
+
+---
+
+## 17. Pipelines
+
+Automate ML workflows and prevent leakage.
+
+### Example Steps:
+1. Scaling
+2. Encoding
+3. Model training
+
+Benefits:
+- Cleaner code
+- Reproducibility
+- Safer evaluation
+
+---
+
+## 18. Model Interpretability
+
+Understanding why a model makes decisions.
+
+### Techniques:
+- Feature importance
+- SHAP values
+- LIME
+
+### Why it matters:
+- Debugging
+- Trust
+- Compliance
+
+---
+
+## 19. Probabilistic Machine Learning
+
+Models output probabilities instead of fixed predictions.
+
+### Example:
+- Logistic Regression → probability of class
+
+### Benefits:
+- Better decision making
+- Uncertainty estimation
+
+---
+
+## 20. Ensemble Methods
+
+Combine multiple models to improve performance.
+
+### 20.1 Bagging
+
+- Train models independently
+- Reduce variance
+
+Example:
+- Random Forest
+
+---
+
+### 20.2 Boosting
+
+- Train sequentially
+- Focus on errors
+
+Examples:
+- AdaBoost
+- Gradient Boosting
+- XGBoost
+- LightGBM
+
+---
+
+### 20.3 Stacking
+
+- Combine predictions from multiple models
+- Meta-model learns final output
+
+---
+
+## 21. Dimensionality Reduction
+
+Reduce number of features.
+
+### Benefits:
+- Faster training
+- Less overfitting
+- Better visualization
+
+### Techniques:
+- PCA
+- t-SNE
+- UMAP
+
+---
+
+## 22. Hyperparameter Tuning
+
+Hyperparameters are set before training.
+
+### Methods:
+- Grid Search
+- Random Search
+- Bayesian Optimization
+
+---
+
+## 23. Training vs Inference
+
+### Training:
+- Model learns patterns
+- Expensive
+
+### Inference:
+- Model makes predictions
+- Fast
+
+---
+
+## 24. Online vs Offline Learning
+
+### Offline (Batch):
+- Train once on full dataset
+
+### Online:
+- Continuously update with new data
+
+---
+
+## 25. Concept Drift
+
+When data distribution changes over time.
+
+### Types:
+- Sudden drift
+- Gradual drift
+
+### Solutions:
+- Retraining
+- Monitoring
+
+---
+
+## 26. Common Pitfalls
+
+### 26.1 Overfitting
+- Too complex model
+
+### 26.2 Underfitting
+- Too simple model
+
+### 26.3 Data Leakage
+- Invalid evaluation
+
+### 26.4 Imbalanced Data
+
+#### Solutions:
+- Resampling
+- Class weights
+
+---
+
+## 27. Practical Tips
+
+- Start simple
+- Always visualize data
+- Use baseline models
+- Validate properly
+- Track experiments
+
+---
+
+## 28. Quick Algorithm Selection Guide
+
+| Problem Type     | Suggested Models                  |
+|------------------|----------------------------------|
+| Tabular Data     | Random Forest, XGBoost          |
+| Images           | CNNs                            |
+| Text             | Transformers / LLMs             |
+| Small Data       | Simpler models                  |
+
+---
+
+## 29. ML vs Deep Learning
+
+| Aspect         | Machine Learning       | Deep Learning          |
+|----------------|----------------------|------------------------|
+| Data Need      | Low–Medium           | High                   |
+| Feature Eng.   | Manual               | Automatic              |
+| Compute        | Low                 | High                   |
+| Performance    | Good                | State-of-the-art       |
+
+---
+
+## 30. Cheat Sheet Summary
+
+- ML = learning from data
+- Supervised vs Unsupervised vs RL
+- Overfitting = memorization
+- Use validation properly
+- Scaling matters
+- Pipelines prevent leakage
+- Ensembles boost performance
+- Always evaluate correctly
+
+---
+
+## 31. What to Learn Next
+
+After ML basics, move to:
+
+- Deep Learning
+- Neural Networks
+- Transformers
+- LLMs
+- MLOps
+
+---
+
+# End of ML Basics
